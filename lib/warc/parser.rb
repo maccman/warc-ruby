@@ -3,7 +3,6 @@ module Warc
     def parse(stream)
       # Find next item
       loop do
-        offset = stream.tell
         version_line = stream.readline
         break if version_line.chomp("\r\n") == "WARC/1.0"
       end
